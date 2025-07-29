@@ -391,8 +391,8 @@
                     Experience the thrill, the danger, and the beauty of one of cinema's most iconic films.
                 </p>
                 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <!-- CTA Button -->
+                <div class="flex justify-center">
                     <motion.button 
                         whileHover={{ 
                             scale: 1.05,
@@ -404,18 +404,23 @@
                     >
                         Watch Now
                     </motion.button>
-                    
-                    <motion.button 
-                        whileHover={{ 
-                            scale: 1.05,
-                            boxShadow: "0 0 30px rgba(30, 58, 138, 0.5)"
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        class="border-2 border-drive-blue text-drive-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-drive-blue hover:text-white transition-all duration-300"
-                    >
-                        Learn More
-                    </motion.button>
                 </div>
+                
+                <!-- Animated GIF -->
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    class="mt-12 flex justify-center"
+                >
+                    <img 
+                        src="images/Ryan3.gif" 
+                        alt="Ryan Gosling Animated" 
+                        class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg neon-border"
+                        style="filter: contrast(1.1) saturate(1.2);"
+                    />
+                </motion.div>
             </motion.div>
         </div>
     </section>
